@@ -21,8 +21,9 @@
   background-color: white;
 }
 
-.wtm {
+.wtm a {
   height: 4em;
+  text-decoration: none;
 }
 
  .w {
@@ -405,9 +406,9 @@ font-family: helvetica;
 
 
  .dotdot {
-   text-decoration: none;
-   color: black;
-font-family: helvetica;
+ text-decoration: none;
+ color: black;
+ font-family: helvetica;
  position: relative;
  animation: movedotdot 1.8s forwards;
  font-size: 1em;
