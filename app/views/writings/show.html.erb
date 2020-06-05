@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @writing.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @writing.title %>
+</p>
+
+<iframe src=<%= url_for(@writing.document) if @writing.document.attached? %> width="700" height="780" style="border: none;"></iframe>
+<br>
+
+<%= link_to 'Edit', edit_writing_path(@writing) %>&nbsp &nbsp |
+<%= link_to 'Back', writings_path %>&nbsp &nbsp|
+<%= link_to 'New Writing', new_writing_path %>

@@ -1,0 +1,6 @@
+
+<% if @writings.present? %>
+  <% @writings.reverse_each do |writing| %>
+    <iframe src=<%= url_for(writing.document) if writing.document.attached? %> width="700" height="780" style="border: none;"></iframe>
+  <% end %>
+<% end %>
