@@ -1,7 +1,10 @@
-<div class="texts">
 <% if @writings.present? %>
-  <% @writings.reverse_each do |writing| %>
-    <iframe src=<%= url_for(writing.document) if writing.document.attached? %> width="700" height="1000" style="border: 0; padding-bottom: 10em;"></iframe>
+  <% @writings.reverse.each do |wr| %>
+    <% if wr.document.content_type.start_with?("audio")%>
+      <audio src=<%=url_for(wr.document)%> controls>  </audio>
+    <% else %>
+      <iframe source src= <%=url_for(wr.document)%> type="audio/mp3"
+      width="700" height="1000" style="border: 0; padding-bottom: 10em;"></iframe>
+    <% end %>
   <% end %>
 <% end %>
-</div>

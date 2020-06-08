@@ -3,6 +3,8 @@ class WritingsController < ApplicationController
 
   # GET /writings
   # GET /writings.json
+
+
   def index
     @writings = Writing.all
   end
